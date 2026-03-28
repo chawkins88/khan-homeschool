@@ -1,0 +1,1371 @@
+{
+  "cc-sixth-grade-math": {
+    "display_name": "6th Grade Math",
+    "slug": "cc-sixth-grade-math",
+    "url": "https://www.khanacademy.org/math/cc-sixth-grade-math",
+    "node_count": 0,
+    "nodes": {},
+    "units_from_text": [
+      {
+        "unit": "UNIT 1",
+        "lessons": [
+          "Ratios"
+        ]
+      },
+      {
+        "unit": "UNIT 2",
+        "lessons": [
+          "Arithmetic with rational numbers"
+        ]
+      },
+      {
+        "unit": "UNIT 3",
+        "lessons": [
+          "Rates and percentages"
+        ]
+      },
+      {
+        "unit": "UNIT 4",
+        "lessons": [
+          "Exponents and order of operations"
+        ]
+      },
+      {
+        "unit": "UNIT 5",
+        "lessons": [
+          "Negative numbers"
+        ]
+      },
+      {
+        "unit": "UNIT 6",
+        "lessons": [
+          "Variables & expressions"
+        ]
+      },
+      {
+        "unit": "UNIT 7",
+        "lessons": [
+          "Equations & inequalities"
+        ]
+      },
+      {
+        "unit": "UNIT 8",
+        "lessons": [
+          "Plane figures"
+        ]
+      },
+      {
+        "unit": "UNIT 9",
+        "lessons": [
+          "Coordinate plane"
+        ]
+      },
+      {
+        "unit": "UNIT 10",
+        "lessons": [
+          "3D figures"
+        ]
+      },
+      {
+        "unit": "UNIT 11",
+        "lessons": [
+          "Data and statistics"
+        ]
+      },
+      {
+        "unit": "UNIT 12",
+        "lessons": [
+          "Khan for families"
+        ]
+      },
+      {
+        "unit": "COURSE CHALLENGE",
+        "lessons": [
+          "Test your knowledge of the skills in this course.",
+          "Start Course challenge",
+          "Not feeling ready for this? Check out Get ready for 6th grade math.",
+          "6th grade math",
+          "14,800 possible mastery points",
+          "Mastered",
+          "Proficient",
+          "Familiar",
+          "Attempted",
+          "Not started",
+          "Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 1",
+        "lessons": [
+          "Up next for you!",
+          "UP NEXT FOR YOU!",
+          "Basic ratios: unfamiliarUp next for you!",
+          "Ratios with tape diagrams: unfamiliar",
+          "Equivalent ratios with equal groups: unfamiliar",
+          "Create double number lines: unfamiliar",
+          "Ratios with double number lines: unfamiliar",
+          "Relate double number lines and ratio tables: unfamiliar",
+          "Ratios: Quiz 1",
+          "Ratio tables: unfamiliar",
+          "Equivalent ratios: unfamiliar",
+          "Equivalent ratio word problems: unfamiliar",
+          "Equivalent ratios in the real world: unfamiliar",
+          "Understand equivalent ratios in the real world: unfamiliar",
+          "Ratios: Quiz 2",
+          "Ratios on coordinate plane: unfamiliar",
+          "Ratios and units of measurement: unfamiliar",
+          "Part-part-whole ratios: unfamiliar",
+          "Ratios: Quiz 3",
+          "Ratios: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 2",
+        "lessons": [
+          "Adding decimals: thousandths: unfamiliar",
+          "Subtracting decimals: thousandths: unfamiliar",
+          "Adding & subtracting decimals word problems: unfamiliar",
+          "Arithmetic with rational numbers: Quiz 1",
+          "Divide fractions by whole numbers: unfamiliar",
+          "Divide whole numbers by fractions: unfamiliar",
+          "Dividing fractions: unfamiliar",
+          "Divide mixed numbers: unfamiliar",
+          "Interpret fraction division: unfamiliar",
+          "Dividing fractions word problems: unfamiliar",
+          "Arithmetic with rational numbers: Quiz 2",
+          "Decimal multiplication place value: unfamiliar",
+          "Multiplying decimals like 0.847x3.54 (standard algorithm): unfamiliar",
+          "Division by 2-digits: unfamiliar",
+          "Multi-digit division: unfamiliar",
+          "Divide whole numbers to get a decimal: unfamiliar",
+          "Dividing decimals: hundredths: unfamiliar",
+          "Dividing decimals: thousandths: unfamiliar",
+          "Arithmetic with rational numbers: Quiz 3",
+          "Arithmetic with rational numbers: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 3",
+        "lessons": [
+          "Unit rates: unfamiliar",
+          "Rate problems: unfamiliar",
+          "Comparing rates: unfamiliar",
+          "Rates and percentages: Quiz 1",
+          "Intro to percents: unfamiliar",
+          "Percents from fraction models: unfamiliar",
+          "Find percents visually: unfamiliar",
+          "Rates and percentages: Quiz 2",
+          "Equivalent representations of percent problems: unfamiliar",
+          "Benchmark percents: unfamiliar",
+          "Finding percents: unfamiliar",
+          "Percent word problems: unfamiliar",
+          "Rates and percentages: Quiz 3",
+          "Rates and percentages: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 4",
+        "lessons": [
+          "Meaning of exponents: unfamiliar",
+          "Powers of whole numbers: unfamiliar",
+          "Powers of fractions & decimals: unfamiliar",
+          "Exponents and order of operations: Quiz 1",
+          "Order of operations (no exponents): unfamiliar",
+          "Order of operations: unfamiliar",
+          "Order of operations with fractions and exponents: unfamiliar",
+          "Exponents and order of operations: Quiz 2",
+          "Exponents and order of operations: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 5",
+        "lessons": [
+          "Negative numbers on the number line: unfamiliar",
+          "Interpreting negative numbers: unfamiliar",
+          "Negative symbol as opposite: unfamiliar",
+          "Number opposites: unfamiliar",
+          "Negative decimals on the number line: unfamiliar",
+          "Negative fractions on the number line: unfamiliar",
+          "Negative numbers: Quiz 1",
+          "Compare rational numbers using a number line: unfamiliar",
+          "Compare rational numbers: unfamiliar",
+          "Writing numerical inequalities: unfamiliar",
+          "Ordering small negative numbers: unfamiliar",
+          "Ordering rational numbers: unfamiliar",
+          "Negative numbers: Quiz 2",
+          "Meaning of absolute value: unfamiliar",
+          "Finding absolute values: unfamiliar",
+          "Compare and order absolute values: unfamiliar",
+          "Comparing absolute values challenge: unfamiliar",
+          "Interpreting absolute value: unfamiliar",
+          "Negative numbers: Quiz 3",
+          "Negative numbers: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 6",
+        "lessons": [
+          "Parts of algebraic expressions: unfamiliar",
+          "Evaluating expressions with one variable: unfamiliar",
+          "Variable expressions with exponents: unfamiliar",
+          "Evaluating expressions with multiple variables: unfamiliar",
+          "Evaluating expressions with multiple variables: fractions & decimals: unfamiliar",
+          "Expression value intuition: unfamiliar",
+          "Evaluating expressions with variables word problems: unfamiliar",
+          "Variables & expressions: Quiz 1",
+          "Writing basic expressions with variables: unfamiliar",
+          "Writing expressions with variables: unfamiliar",
+          "Writing basic expressions word problems: unfamiliar",
+          "Variables & expressions: Quiz 2",
+          "Least common multiple: unfamiliar",
+          "Greatest common factor: unfamiliar",
+          "Factor with the distributive property (no variables): unfamiliar",
+          "Distributive property with variables: unfamiliar",
+          "Create equivalent expressions by factoring: unfamiliar",
+          "Factor with distributive property (variables): unfamiliar",
+          "Combining like terms: unfamiliar",
+          "Equivalent expressions: unfamiliar",
+          "Variables & expressions: Quiz 3",
+          "Variables & expressions: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 7",
+        "lessons": [
+          "Testing solutions to equations: unfamiliar",
+          "Identify equations from visual models (tape diagrams): unfamiliar",
+          "Identify equations from visual models (hanger diagrams): unfamiliar",
+          "Solve equations from visual models: unfamiliar",
+          "One-step addition & subtraction equations: unfamiliar",
+          "One-step addition & subtraction equations: fractions & decimals: unfamiliar",
+          "One-step multiplication & division equations: unfamiliar",
+          "One-step multiplication & division equations: fractions & decimals: unfamiliar",
+          "Equations & inequalities: Quiz 1",
+          "Find the mistake in one-step equations: unfamiliar",
+          "Translate one-step equations and solve: unfamiliar",
+          "Model with one-step equations: unfamiliar",
+          "Model with one-step equations and solve: unfamiliar",
+          "Equations & inequalities: Quiz 2",
+          "Testing solutions to inequalities (basic): unfamiliar",
+          "Graphing basic inequalities: unfamiliar",
+          "Inequality from graph: unfamiliar",
+          "Plotting inequalities: unfamiliar",
+          "Inequalities word problems: unfamiliar",
+          "Equations & inequalities: Quiz 3",
+          "Independent versus dependent variables: unfamiliar",
+          "Tables from equations with 2 variables: unfamiliar",
+          "Match equations to coordinates on a graph: unfamiliar",
+          "Relationships between quantities in equations: unfamiliar",
+          "Analyze relationships between variables: unfamiliar",
+          "Equations & inequalities: Quiz 4",
+          "Equations & inequalities: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 8",
+        "lessons": [
+          "Area of parallelograms: unfamiliar",
+          "Find missing length when given area of a parallelogram: unfamiliar",
+          "Find base and height on a triangle: unfamiliar",
+          "Area of right triangles: unfamiliar",
+          "Area of triangles: unfamiliar",
+          "Find missing length when given area of a triangle: unfamiliar",
+          "Decompose area with triangles: unfamiliar",
+          "Area of composite shapes: unfamiliar",
+          "Plane figures: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 9",
+        "lessons": [
+          "Points on the coordinate plane: unfamiliar",
+          "Quadrants on the coordinate plane: unfamiliar",
+          "Distance between points: vertical or horizontal: unfamiliar",
+          "Coordinate plane problems in all four quadrants: unfamiliar",
+          "Coordinate plane: Quiz 1",
+          "Drawing polygons with coordinates: unfamiliar",
+          "Area and perimeter on the coordinate plane: unfamiliar",
+          "Quadrilateral problems on the coordinate plane: unfamiliar",
+          "Coordinate plane: Quiz 2",
+          "Coordinate plane: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 10",
+        "lessons": [
+          "Identify parts of 3D shapes: unfamiliar",
+          "Identify geometric solids (3D shapes): unfamiliar",
+          "Volume by multiplying area of base times height: unfamiliar",
+          "Volume with fractions: unfamiliar",
+          "Volume word problems: fractions & decimals: unfamiliar",
+          "3D figures: Quiz 1",
+          "Nets of polyhedra: unfamiliar",
+          "Surface area using nets: unfamiliar",
+          "Expressions to find surface area: unfamiliar",
+          "Surface area: unfamiliar",
+          "Surface area word problems: unfamiliar",
+          "3D figures: Quiz 2",
+          "3D figures: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 11",
+        "lessons": [
+          "Statistical questions: unfamiliar",
+          "Creating frequency tables: unfamiliar",
+          "Creating dot plots: unfamiliar",
+          "Reading dot plots & frequency tables: unfamiliar",
+          "Estimate center using dot plots: unfamiliar",
+          "Create histograms: unfamiliar",
+          "Read histograms: unfamiliar",
+          "Data and statistics: Quiz 1",
+          "Calculating the mean: unfamiliar",
+          "Calculating the median: unfamiliar",
+          "Calculating the mean: data displays: unfamiliar",
+          "Calculating the median: data displays: unfamiliar",
+          "Missing value given the mean: unfamiliar",
+          "Effects of shifting, adding, & removing a data point: unfamiliar",
+          "Data and statistics: Quiz 2",
+          "Interquartile range (IQR): unfamiliar",
+          "Reading box plots: unfamiliar",
+          "Creating box plots: unfamiliar",
+          "Interpreting quartiles: unfamiliar",
+          "Mean absolute deviation (MAD): unfamiliar",
+          "Data and statistics: Quiz 3",
+          "Comparing data displays: unfamiliar",
+          "Shape of distributions: unfamiliar",
+          "Clusters, gaps, & peaks in data distributions: unfamiliar",
+          "Data and statistics: Quiz 4",
+          "Data and statistics: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 12",
+        "lessons": [
+          "This unit does not include exercises."
+        ]
+      },
+      {
+        "unit": "COURSE CHALLENGE",
+        "lessons": [
+          "Test your knowledge of the skills in this course.",
+          "Start Course challenge",
+          "Up next for you:"
+        ]
+      },
+      {
+        "unit": "Unit 1: Ratios",
+        "lessons": [
+          "Unit mastery: 0%",
+          "Intro to ratios",
+          "Intro to ratios",
+          "Basic ratios",
+          "Part:whole ratios",
+          "Basic ratios",
+          "Ratio review",
+          "Visualize equivalent ratios",
+          "Ratios with tape diagrams",
+          "Ratios with tape diagrams (part:whole)",
+          "Ratios with tape diagrams",
+          "Equivalent ratio word problems",
+          "Simplify a ratio from a tape diagram",
+          "Equivalent ratios with equal groups",
+          "Ratios and double number lines",
+          "Create double number lines",
+          "Ratios with double number lines",
+          "Relate double number lines and ratio tables",
+          "Equivalent ratios",
+          "Ratio tables",
+          "Solving ratio problems with tables",
+          "Ratio tables",
+          "Equivalent ratios",
+          "Equivalent ratios: recipe",
+          "Equivalent ratios",
+          "Equivalent ratio word problems",
+          "Understanding equivalent ratios",
+          "Equivalent ratios in the real world",
+          "Interpreting unequal ratios",
+          "Understand equivalent ratios in the real world",
+          "Ratio application",
+          "Ratios on coordinate plane",
+          "Ratios on coordinate plane",
+          "Ratios and measurement",
+          "Ratios and units of measurement",
+          "Part to whole ratio word problem using tables",
+          "Part-part-whole ratios",
+          "Ratios FAQ",
+          "Get started"
+        ]
+      },
+      {
+        "unit": "Unit 2: Arithmetic with rational numbers",
+        "lessons": [
+          "Unit mastery: 0%",
+          "Adding decimals",
+          "Adding decimals: 9.087+15.31",
+          "Adding decimals: 0.822+5.65",
+          "Adding three decimals",
+          "Adding decimals: thousandths",
+          "Subtracting decimals",
+          "Subtracting decimals: 9.005 - 3.6",
+          "Subtracting decimals: 39.1 - 0.794",
+          "Subtracting decimals: thousandths",
+          "Adding and subtracting decimals word problems",
+          "Adding decimals word problem",
+          "Adding & subtracting decimals word problem",
+          "Adding & subtracting decimals word problems",
+          "Dividing fractions and whole numbers",
+          "Dividing a fraction by a whole number",
+          "Divide fractions by whole numbers",
+          "Meaning of the reciprocal",
+          "Dividing a whole number by a fraction",
+          "Dividing a whole number by a fraction with reciprocal",
+          "Divide whole numbers by fractions",
+          "Dividing fractions by fractions",
+          "Understanding division of fractions",
+          "Dividing fractions: 2/5 \u00f7 7/3",
+          "Dividing fractions: 3/5 \u00f7 1/2",
+          "Dividing fractions",
+          "Dividing mixed numbers",
+          "Divide mixed numbers",
+          "Writing fraction division story problems",
+          "Interpret fraction division",
+          "Dividing whole numbers & fractions: t-shirts",
+          "Area with fraction division example",
+          "Dividing fractions word problems",
+          "Dividing fractions review",
+          "Multiplying decimals",
+          "Intro to multiplying decimals",
+          "Decimal multiplication place value",
+          "Multiplying challenging decimals",
+          "Decimal multiplication place value",
+          "Multiplying decimals like 0.847x3.54 (standard algorithm)",
+          "Dividing whole numbers",
+          "Dividing by 2-digits: 9815\u00f765",
+          "Dividing by 2-digits: 7182\u00f742",
+          "Division by 2-digits",
+          "Multi-digit division",
+          "Dividing decimals",
+          "Dividing whole numbers to get a decimal",
+          "Divide whole numbers to get a decimal",
+          "Dividing a decimal by a whole number",
+          "Dividing a whole number by a decimal",
+          "Dividing decimals with hundredths",
+          "Dividing decimals completely",
+          "Long division with decimals",
+          "Dividing decimals: hundredths",
+          "Dividing by a multi-digit decimal",
+          "Dividing decimals: thousandths",
+          "Arithmetic with rational numbers FAQ"
+        ]
+      },
+      {
+        "unit": "Unit 3: Rates and percentages",
+        "lessons": [
+          "Unit mastery: 0%",
+          "Intro to rates",
+          "Intro to rates",
+          "Solving unit rate problem",
+          "Solving unit price problem",
+          "Unit rates",
+          "Rate problems",
+          "Rate problems",
+          "Comparing rates example",
+          "Comparing rates"
+        ]
+      }
+    ],
+    "root_key": null
+  },
+  "ms-physics": {
+    "display_name": "Middle School Physics",
+    "slug": "ms-physics",
+    "url": "https://www.khanacademy.org/science/ms-physics",
+    "node_count": 0,
+    "nodes": {},
+    "units_from_text": [
+      {
+        "unit": "UNIT 1",
+        "lessons": [
+          "Motion and forces"
+        ]
+      },
+      {
+        "unit": "UNIT 2",
+        "lessons": [
+          "Non-contact interactions"
+        ]
+      },
+      {
+        "unit": "UNIT 3",
+        "lessons": [
+          "Energy"
+        ]
+      },
+      {
+        "unit": "UNIT 4",
+        "lessons": [
+          "Waves"
+        ]
+      },
+      {
+        "unit": "UNIT 5",
+        "lessons": [
+          "Explore physics through simulations"
+        ]
+      },
+      {
+        "unit": "UNIT 6",
+        "lessons": [
+          "Teacher resources"
+        ]
+      },
+      {
+        "unit": "COURSE CHALLENGE",
+        "lessons": [
+          "Test your knowledge of the skills in this course.",
+          "Start Course challenge",
+          "Science",
+          "Middle school physics",
+          "2,100 possible mastery points",
+          "Mastered",
+          "Proficient",
+          "Familiar",
+          "Attempted",
+          "Not started",
+          "Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 1",
+        "lessons": [
+          "Up next for you!",
+          "UP NEXT FOR YOU!",
+          "Understand: motion: unfamiliarUp next for you!",
+          "Apply: motion: unfamiliar",
+          "Understand: forces and Newton's third law: unfamiliar",
+          "Apply: forces and Newton's third law: unfamiliar",
+          "Motion and forces: Quiz 1",
+          "Understand: connecting motion and forces: unfamiliar",
+          "Apply: connecting motion and forces: unfamiliar",
+          "Motion and forces: Quiz 2",
+          "Motion and forces: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 2",
+        "lessons": [
+          "Understand: gravitational force: unfamiliar",
+          "Apply: gravitational force: unfamiliar",
+          "Non-contact interactions: Quiz 1",
+          "Understand: electric and magnetic forces: unfamiliar",
+          "Apply: electric and magnetic forces: unfamiliar",
+          "Non-contact interactions: Quiz 2",
+          "Non-contact interactions: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 3",
+        "lessons": [
+          "Understand: kinetic energy: unfamiliar",
+          "Apply: kinetic energy: unfamiliar",
+          "Understand: potential energy: unfamiliar",
+          "Apply: potential energy: unfamiliar",
+          "Energy: Quiz 1",
+          "Understand: conservation of energy: unfamiliar",
+          "Apply: conservation of energy: unfamiliar",
+          "Energy: Quiz 2",
+          "Energy: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 4",
+        "lessons": [
+          "Understand: wave properties: unfamiliar",
+          "Apply: wave properties: unfamiliar",
+          "Understand: sound waves: unfamiliar",
+          "Waves: Quiz 1",
+          "Understand: electromagnetic waves: unfamiliar",
+          "Apply: electromagnetic waves: unfamiliar",
+          "Waves: Quiz 2",
+          "Waves: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 5",
+        "lessons": [
+          "This unit's exercises do not count toward course mastery."
+        ]
+      },
+      {
+        "unit": "Unit 6",
+        "lessons": [
+          "This unit does not include exercises."
+        ]
+      },
+      {
+        "unit": "COURSE CHALLENGE",
+        "lessons": [
+          "Test your knowledge of the skills in this course.",
+          "Start Course challenge",
+          "Welcome to middle school physics!",
+          "Learn how we can describe and predict the motion of objects. Explore fundamental interactions of nature which act through fields. Discover how energy manifests in different ways and is conserved. Investigate the properties of waves, including sound and electromagnetic waves. This course is aligned to the middle school Next Generation Science Standards (NGSS). If you\u2019ve mastered this content and want to explore physics at the next level, we recommend our high school physics course.",
+          "Give us feedback on this course",
+          "Learn more",
+          "Watch an introduction video",
+          "2 minutes 25 seconds",
+          "Up next for you:"
+        ]
+      },
+      {
+        "unit": "Unit 1: Motion and forces",
+        "lessons": [
+          "Unit mastery: 0%",
+          "Motion",
+          "Introduction to middle school physics",
+          "Speed and velocity",
+          "Acceleration",
+          "Reference frames",
+          "Describing motion",
+          "Understand: motion",
+          "Apply: motion",
+          "Forces",
+          "Forces",
+          "Newton's third law",
+          "Forces and Newton's third law",
+          "Understand: forces and Newton's third law",
+          "Apply: forces and Newton's third law",
+          "Connecting motion and forces",
+          "Newton's first law",
+          "Newton's second law",
+          "Connecting motion and forces",
+          "Understand: connecting motion and forces",
+          "Apply: connecting motion and forces",
+          "Get started"
+        ]
+      },
+      {
+        "unit": "Unit 2: Non-contact interactions",
+        "lessons": [
+          "Unit mastery: 0%",
+          "Gravitational force",
+          "Gravitational force",
+          "Gravitational force",
+          "Understand: gravitational force",
+          "Apply: gravitational force",
+          "Activity: How can a skydiver fall safely?",
+          "Activity: How can a skydiver fall safely?",
+          "Electric and magnetic forces",
+          "Electric force",
+          "Magnetic force",
+          "Electric and magnetic forces",
+          "Understand: electric and magnetic forces",
+          "Apply: electric and magnetic forces",
+          "Activity: How do bees pick up pollen in flowers?",
+          "Activity: How do bees pick up pollen in flowers?"
+        ]
+      },
+      {
+        "unit": "Unit 3: Energy",
+        "lessons": [
+          "Unit mastery: 0%",
+          "Kinetic energy",
+          "Kinetic energy",
+          "Kinetic energy",
+          "Understand: kinetic energy",
+          "Apply: kinetic energy",
+          "Potential energy",
+          "Potential energy",
+          "Potential energy",
+          "Understand: potential energy",
+          "Apply: potential energy",
+          "Conservation of energy",
+          "Conservation of energy",
+          "Conservation of energy",
+          "Understand: conservation of energy",
+          "Apply: conservation of energy",
+          "Activity: Why doesn't a basketball bounce forever?",
+          "Activity: Why doesn't a basketball bounce forever?"
+        ]
+      },
+      {
+        "unit": "Unit 4: Waves",
+        "lessons": [
+          "Unit mastery: 0%",
+          "Wave properties",
+          "Wave properties",
+          "Wave properties",
+          "Understand: wave properties",
+          "Apply: wave properties",
+          "Sound waves",
+          "Sound waves",
+          "Understand: sound waves",
+          "Human ear",
+          "Electromagnetic waves",
+          "The electromagnetic spectrum",
+          "Electromagnetic waves and matter",
+          "Electromagnetic waves",
+          "Understand: electromagnetic waves",
+          "Apply: electromagnetic waves",
+          "Human eye",
+          "Activity: How can light interactions be used to create art?",
+          "Activity: How can light interactions be used to create art?"
+        ]
+      },
+      {
+        "unit": "Unit 5: Explore physics through simulations",
+        "lessons": [
+          "Mastery unavailable",
+          "Introduction to simulation-based learning",
+          "Introduction to simulation-based learning",
+          "Explore conservation of energy through simulations",
+          "Conservation of energy",
+          "PhET challenge: Conservation of energy"
+        ]
+      },
+      {
+        "unit": "Unit 6: Teacher resources",
+        "lessons": [
+          "Mastery unavailable",
+          "Unit guides",
+          "How to use our NGSS-aligned unit guides",
+          "Middle school physics unit guides",
+          "Hands-on physics activities",
+          "Activity: How can a skydiver fall safely?",
+          "Activity: How do bees pick up pollen in flowers?",
+          "Activity: Why doesn't a basketball bounce forever?",
+          "Activity: How can light interactions be used to create art?"
+        ]
+      },
+      {
+        "unit": "Course challenge",
+        "lessons": [
+          "Test your knowledge of the skills in this course.",
+          "Start Course challenge",
+          "Community questions",
+          "Our mission is to provide a free, world-class education to anyone, anywhere.",
+          "Khan Academy is a 501(c)(3) nonprofit organization. Donate or volunteer today!",
+          "Site Navigation",
+          "About",
+          "Impact",
+          "Our team",
+          "Our interns",
+          "Our content specialists",
+          "Our leadership",
+          "Our supporters",
+          "Our contributors",
+          "Our finances",
+          "Careers",
+          "Internships",
+          "Cookie Preferences",
+          "Contact",
+          "Help center",
+          "Support community",
+          "Share your story",
+          "Press",
+          "Download our apps",
+          "Courses",
+          "Math: Pre-K - 8th grade",
+          "Math: High school & college",
+          "Math: Multiple grades",
+          "Math: Illustrative Math-aligned",
+          "Math: Eureka Math Squared-aligned",
+          "Math: Eureka Math-aligned",
+          "Math: Get ready courses",
+          "Test prep",
+          "English language arts (ELA)",
+          "Science",
+          "Social studies",
+          "Computing",
+          "Economics",
+          "Life skills",
+          "Partner courses",
+          "Khan for Educators",
+          "Change language",
+          "\u00a9 2026 Khan Academy",
+          "Terms of use",
+          "Privacy Policy",
+          "Cookie Notice",
+          "Accessibility Statement"
+        ]
+      }
+    ],
+    "root_key": null
+  },
+  "oer-project-big-history": {
+    "display_name": "OER Project: Big History",
+    "slug": "oer-project-big-history",
+    "url": "https://www.khanacademy.org/humanities/oer-project-big-history",
+    "node_count": 0,
+    "nodes": {},
+    "units_from_text": [
+      {
+        "unit": "UNIT 1",
+        "lessons": [
+          "What is Big History?"
+        ]
+      },
+      {
+        "unit": "UNIT 2",
+        "lessons": [
+          "History of the Universe and Earth"
+        ]
+      },
+      {
+        "unit": "UNIT 3",
+        "lessons": []
+      },
+      {
+        "unit": "UNIT 4",
+        "lessons": [
+          "Early Humans"
+        ]
+      },
+      {
+        "unit": "UNIT 5",
+        "lessons": [
+          "Agriculture & Complex Societies"
+        ]
+      },
+      {
+        "unit": "UNIT 6",
+        "lessons": [
+          "The Modern Age"
+        ]
+      },
+      {
+        "unit": "UNIT 7",
+        "lessons": [
+          "The Future"
+        ]
+      },
+      {
+        "unit": "UNIT 8",
+        "lessons": [
+          "Teacher Resources"
+        ]
+      },
+      {
+        "unit": "COURSE CHALLENGE",
+        "lessons": [
+          "Test your knowledge of the skills in this course.",
+          "Start Course challenge",
+          "Arts and humanities",
+          "OER Project: Big History",
+          "2,400 possible mastery points",
+          "Mastered",
+          "Proficient",
+          "Familiar",
+          "Attempted",
+          "Not started",
+          "Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 1",
+        "lessons": [
+          "Up next for you!",
+          "UP NEXT FOR YOU!",
+          "1.1 Practice: unfamiliarUp next for you!",
+          "1.2 practice: unfamiliar",
+          "What is Big History?: Quiz 1",
+          "1.3 and 1.4 practice: unfamiliar",
+          "What is Big History?: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 2",
+        "lessons": [
+          "2.1 practice : unfamiliar",
+          "2.2 practice: unfamiliar",
+          "2.3 practice: unfamiliar",
+          "History of the Universe and Earth: Quiz 1",
+          "2.4 practice: unfamiliar",
+          "2.5 practice: unfamiliar",
+          "2.6 practice: unfamiliar",
+          "History of the Universe and Earth: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 3",
+        "lessons": [
+          "3.1 practice: unfamiliar",
+          "3.2 practice: unfamiliar",
+          "Life: Quiz 1",
+          "3.3 and 3.4 practice: unfamiliar",
+          "Life: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 4",
+        "lessons": [
+          "4.1 practice: unfamiliar",
+          "4.2 and 4.3 practice: unfamiliar",
+          "Early Humans: Quiz 1",
+          "4.4 and 4.5 practice: unfamiliar",
+          "Early Humans: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 5",
+        "lessons": [
+          "5.1 practice: unfamiliar",
+          "5.2 and 5.3 practice: unfamiliar",
+          "Agriculture & Complex Societies: Quiz 1",
+          "5.4 and 5.5 practice: unfamiliar",
+          "Agriculture & Complex Societies: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 6",
+        "lessons": [
+          "6.1 and 6.2 practice: unfamiliar",
+          "6.3 and 6.4 practice: unfamiliar",
+          "The Modern Age: Quiz 1",
+          "6.5 and 6.6 practice: unfamiliar",
+          "The Modern Age: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 7",
+        "lessons": [
+          "7.1 and 7.2 practice: unfamiliar",
+          "7.3 and 7.4 practice: unfamiliar",
+          "The Future: Quiz 1",
+          "7.5 and 7.6 practice: unfamiliar",
+          "The Future: Unit test"
+        ]
+      },
+      {
+        "unit": "Unit 8",
+        "lessons": [
+          "This unit does not include exercises."
+        ]
+      },
+      {
+        "unit": "COURSE CHALLENGE",
+        "lessons": [
+          "Test your knowledge of the skills in this course.",
+          "Start Course challenge",
+          "Welcome to OER Project: Big History",
+          "Big History is a unique course that looks at the history of the entire Universe, stretching 13.8 billion years into the past and all the way into the future. You\u2019ll travel to the earliest stars, discover new chemical elements, investigate the Earth\u2019s fiery origins, explore how life on Earth evolved, and journey through human history to see what the future may hold. Explore Big History today! Have you tried the course? Tell us your thoughts in this short survey.",
+          "Start learning!",
+          "Watch an introduction video",
+          "52 seconds",
+          "Up next for you:"
+        ]
+      },
+      {
+        "unit": "Unit 1: What is Big History?",
+        "lessons": [
+          "Unit mastery: 0%",
+          "Welcome to Big History | 1.1",
+          "OER Project: Big History",
+          "Opener: What Is History?"
+        ]
+      },
+      {
+        "unit": "Unit 1 Notebook",
+        "lessons": [
+          "What Makes Big History...BIG?",
+          "Big History 3-2-1",
+          "The Thresholds Gallery",
+          "The Thresholds: Big History",
+          "Big History Thresholds",
+          "My Threshold",
+          "Closer: Threshold Taglines",
+          "1.1 Practice",
+          "Scale | 1.2",
+          "Opener: Close Up and Far Away",
+          "Scale Switching",
+          "Scale: History of Me",
+          "Geography 101",
+          "Geography: Mental Maps",
+          "The Universe's Cosmic Calendar",
+          "The Universe's Cosmic Calendar Story",
+          "Closer: Scale \u2014 Big History Timeline",
+          "1.2 practice",
+          "Origin Stories | 1.3",
+          "Opener: A Cosmic Mad Lib",
+          "Comparing Origin Stories",
+          "Big History Origin Story",
+          "Chinese Origin Story",
+          "Judeo-Christian Origin Story",
+          "Iroquois Origin Story",
+          "Maya Origin Story",
+          "Greek Origin Story",
+          "Zulu Origin Story",
+          "Efik Origin Story",
+          "M\u0101ori Origin Story",
+          "Draw Your Origin Story",
+          "Closer: Origin Story Reflection",
+          "Claim Testing | 1.4",
+          "Opener: The Mystery of the Alien Signal",
+          "The Mystery of the Alien Signal Story",
+          "What Are the Claim Testers?",
+          "What Is Knowledge?",
+          "Claim Warm-Up",
+          "History Mystery",
+          "What Will We Leave Behind?",
+          "Claim Testing: Practice",
+          "Closer: Unit 1 Notebook",
+          "1.3 and 1.4 practice",
+          "Get started"
+        ]
+      },
+      {
+        "unit": "Unit 2: History of the Universe and Earth",
+        "lessons": [
+          "Unit mastery: 0%",
+          "Big Bang to Earth | 2.1",
+          "Opener: Unit 2 Notebook",
+          "The Thresholds: History of the Universe",
+          "History of the Universe Explained",
+          "Thresholds 1-4 Graphic Transport",
+          "Closer: Threshold Jingle",
+          "2.1 practice",
+          "Big Bang | 2.2",
+          "Opener: Universe Quick Poll",
+          "Causation: Alphonse the Camel",
+          "Alphonse the Camel Story",
+          "Threshold 1: The Big Bang",
+          "Threshold 1 Card",
+          "The Big Bang",
+          "How the Universe Began",
+          "Geography: Map of the Observable Universe",
+          "Closer: Quiz Master",
+          "2.2 practice",
+          "Stars Form | 2.3",
+          "Opener: Life of a Star",
+          "Threshold 2: Stars Light Up",
+          "Threshold 2 Card",
+          "How Stars Form",
+          "Causes of Star Formation",
+          "Intuition and Evidence: Cecilia Payne-Gaposchkin",
+          "Claim Testing: Intuition",
+          "The Universe Through a Pinhole",
+          "Claim Testing: Authority",
+          "Closer: Star Comics",
+          "2.3 practice",
+          "Stars Die | 2.4",
+          "Opener: Is It in There?",
+          "Threshold 3: New Chemical Elements",
+          "Threshold 3 Card",
+          "What Did Star Stuff Give Us?",
+          "Causation: From Stars to New Elements",
+          "Closer: Cosmic Connections",
+          "2.4 practice",
+          "Solar System | 2.5",
+          "Opener: Planet Card Sort",
+          "Threshold 4: Solar System and Earth",
+          "Threshold 4 Card",
+          "How Our Solar System Formed",
+          "To Scale: The Solar System",
+          "Closer: Solar System News Headlines",
+          "2.5 practice",
+          "Earth | 2.6",
+          "Opener: Plate Tectonics Match-Up",
+          "What Was the Young Earth Like?",
+          "Earth's Tectonic Plates",
+          "Geography: Plate Tectonics",
+          "Plate Tectonics: Continents in Motion",
+          "Claim Testing: Evidence",
+          "Closer: Unit 2 Notebook",
+          "2.6 practice"
+        ]
+      },
+      {
+        "unit": "Unit 3: Life",
+        "lessons": [
+          "Unit mastery: 0%",
+          "Complexity of Life on Earth | 3.1",
+          "Opener: Unit 3 Notebook",
+          "The Thresholds: Life on Earth",
+          "A Brief History of Life on Earth",
+          "Threshold 5: Life",
+          "Threshold 5 Card",
+          "What is Life?",
+          "Characteristics of Life",
+          "Closer: How Closely Are We Related?",
+          "3.1 practice",
+          "Origins of Life | 3.2",
+          "Opener: Order Up Part 1",
+          "How Did Life on Earth Begin?",
+          "How Did Life Begin?",
+          "Mini-Thresholds of Life",
+          "Order Up Part 2",
+          "What Is the Biosphere?",
+          "Biosphere Comfort Zone",
+          "Living in the Extremes of the Biosphere",
+          "Geography: Biomes",
+          "Geography: Climographs",
+          "Closer: Poetry of Life on Earth",
+          "3.2 practice",
+          "Evolution | 3.3",
+          "Opener: The Tree of Life",
+          "Tree of Life",
+          "What Is DNA?",
+          "What Is Evolution?",
+          "Invent a Species",
+          "Geography: Earth in Motion",
+          "Closer: Claim Testing \u2014 Life",
+          "Extinction Events | 3.4",
+          "Opener: Surviving an Extinction Event",
+          "Extinction Events",
+          "Causation: Extinction Events",
+          "De-Extinction Debate",
+          "Bringing the Past Back to Life Story",
+          "Closer: Unit 3 Notebook",
+          "3.3 and 3.4 practice"
+        ]
+      },
+      {
+        "unit": "Unit 4: Early Humans",
+        "lessons": [
+          "Unit mastery: 0%",
+          "Human's New Complexity | 4.1",
+          "Opener: Unit 4 Notebook",
+          "The Thresholds: Collective Learning",
+          "A Brief History of Our Origins",
+          "Threshold 6: Collective Learning",
+          "Threshold 6 Card",
+          "Closer: Collective Learning Book Cover",
+          "4.1 practice",
+          "Human Ancestors | 4.2",
+          "Opener: Early Ancestors",
+          "Human Evolution",
+          "Evolution Comic",
+          "Human Evolution: Our Many Ancestors",
+          "Our Human History",
+          "Closer: Evolution Postcard",
+          "Collective Learning | 4.3",
+          "Opener: Cave Paintings",
+          "What Is Collective Learning?",
+          "Written in Stone: Petroglyphs",
+          "The Importance of Art",
+          "Closer: Improving Knowledge",
+          "4.2 and 4.3 practice",
+          "Migration | 4.4",
+          "Opener: Mapping Predictions",
+          "Human Movement and Migration",
+          "Early Human Migration",
+          "Geography: Migration and Climate",
+          "Migration and Climate Maps",
+          "Closer: Causation \u2014 Migration",
+          "Foraging Societies | 4.5",
+          "Opener: Foraging Simulation",
+          "Foraging: Life as a Hunter-Gatherer",
+          "Hunter-Gatherer Menu",
+          "From Foraging to Food Shopping",
+          "Claim Testing: Early Humans",
+          "Closer: Unit 4 Notebook",
+          "4.4 and 4.5 practice"
+        ]
+      },
+      {
+        "unit": "Unit 5: Agriculture & Complex Societies",
+        "lessons": [
+          "Unit mastery: 0%",
+          "Farming and Complexity | 5.1",
+          "Opener: Unit 5 Notebook",
+          "The Thresholds: Agriculture and Complex Societies",
+          "A Brief History of New Complexities",
+          "Threshold 7: Agriculture and Complex Societies",
+          "Threshold 7 Card",
+          "Closer: Farming Jingle",
+          "5.1 practice",
+          "Agricultural Revolution | 5.2",
+          "Opener: From Farming to Civilizations",
+          "Why Was Agriculture So Important?",
+          "How Farming Built the First Cities",
+          "Before and After",
+          "Geography: The Agricultural Revolution",
+          "Closer: Making Claims \u2014 Farming",
+          "Complex Societies Appear | 5.3",
+          "Opener: Three Questions",
+          "Where Did the First Cities and States Appear?",
+          "Cities and States",
+          "Frankenstein's Civilization",
+          "Mesopotamia: The Land of Firsts",
+          "Egypt",
+          "Indus River Valley",
+          "Closer: Did They Jump or Were They Pushed?",
+          "5.2 and 5.3 practice",
+          "Empires | 5.4",
+          "Opener: What Caused Expansion",
+          "Why Did Civilization Expand?",
+          "Empire Autopsy",
+          "Han Dynasty China",
+          "Persians and Greeks",
+          "The Roman Empire",
+          "Closer: The Americas",
+          "Expanding Connections | 5.5",
+          "Opener: Geography of Connections",
+          "How Did the World Become Interconnected?",
+          "How Did Cultures Connect?",
+          "World Travelers",
+          "Trade Game",
+          "Silk Road: Merchants of Complexity",
+          "Trade in the Americas",
+          "Oceania",
+          "Closer: Unit 5 Notebook",
+          "5.4 and 5.5 practice",
+          "Museum Project | 5.6",
+          "Opener: Society Superlatives",
+          "Select a Society",
+          "Ancient Society Explorer",
+          "Mapmakers Presentation",
+          "Artifact Crafters Presentation",
+          "Storytellers Presentation",
+          "Closer: Ancient Wisdom"
+        ]
+      },
+      {
+        "unit": "Unit 6: The Modern Age",
+        "lessons": [
+          "Unit mastery: 0%",
+          "The Modern World | 6.1",
+          "Opener: Unit 6 Notebook",
+          "The Thresholds: The Modern Revolution",
+          "The Complexities of Our Modern World",
+          "Threshold 8: The Modern Revolution",
+          "Threshold 8 Card",
+          "Closer: Modern Revolution Meme",
+          "Four World Zones Connect | 6.2",
+          "Opener: Columbian Exchange Snap Judgement",
+          "The Four World Zones",
+          "The Columbian Exchange",
+          "Consequences of the Columbian Exchange",
+          "The Global Economy",
+          "Closer: Connecting the World",
+          "6.1 and 6.2 practice",
+          "Industrial Revolution | 6.3",
+          "Opener: Causes of Industrialization",
+          "Energy Through Time",
+          "The Quest for Energy",
+          "Geography: Industrialization Mystery",
+          "Geography: Industrialization Mystery Maps",
+          "Causation: Industrialization",
+          "The Industrial Revolution",
+          "Urbanization Game",
+          "Urbanization Game Narratives Slideshow",
+          "Modern Social Transformations",
+          "Closer: New Jobs",
+          "Acceleration | 6.4",
+          "Opener: Appetite for Energy",
+          "How Did Change Accelerate?",
+          "Mapping the World",
+          "Mapping the World Data",
+          "The Complexity of War and Peace",
+          "Assessing Acceleration",
+          "Closer: Time-Traveler Letter",
+          "6.3 and 6.4 practice",
+          "Globalization | 6.5",
+          "Opener: Braided Identities",
+          "What Is Globalization?",
+          "Evaluating Globalization",
+          "Geography: Supply Chain",
+          "Closer: Claim Testing\u2014Globalization",
+          "Anthropocene | 6.6",
+          "Opener: Energy Sort",
+          "The Anthropocene Explained",
+          "The Anthropocene and You",
+          "Climate Change",
+          "Solving the Maize: A Big History of Food Complexity",
+          "Global Restaurant",
+          "Global Restaurant Food Cards",
+          "Closer: Unit 6 Notebook",
+          "6.5 and 6.6 practice"
+        ]
+      },
+      {
+        "unit": "Unit 7: The Future",
+        "lessons": [
+          "Unit mastery: 0%",
+          "Complexity & the Future | 7.1",
+          "Opener: Unit 7 Notebook",
+          "The Thresholds: The Future",
+          "Future Stories",
+          "Threshold 9: The Future",
+          "Closer: Timeline Review",
+          "Climate | 7.2",
+          "Opener: Natural Disasters",
+          "Our Future Climate",
+          "The Atmosphere and Climate",
+          "The Climate Science Pioneer: Eunice Newton Foote",
+          "Closer: Visions of the Future\u2014Climate",
+          "7.1 and 7.2 practice",
+          "Space | 7.3",
+          "Opener: What Do Aliens Look Like?",
+          "Space: The Final Threshold?",
+          "A Day on Mars",
+          "Mars Sketchnotes",
+          "Closer: Visions of the Future\u2014Space",
+          "Technology | 7.4",
+          "Opener: Past, Present, and Future Tech",
+          "Future Tech Pros and Cons",
+          "Closer: Visions of the Future\u2014Tech",
+          "7.3 and 7.4 practice",
+          "Human Systems | 7.5",
+          "Opener: Past, Present, and Future Humans",
+          "Human Systems and the Future",
+          "Visions of the Future: Human Systems",
+          "Closer: Unit 7 Notebook",
+          "The Next Threshold | 7.6",
+          "Opener: Visions of the Future Revisited",
+          "The Ninth Threshold",
+          "Threshold 9 Card",
+          "The Next Threshold Podcast",
+          "Closer: Predicting What's Next",
+          "7.5 and 7.6 practice"
+        ]
+      },
+      {
+        "unit": "Unit 8: Teacher Resources",
+        "lessons": [
+          "Mastery unavailable",
+          "Unit Writing Assessments",
+          "Ready-to-use Assignments for Writing Coach",
+          "Teacher's Guide to Writing Coach"
+        ]
+      },
+      {
+        "unit": "Course challenge",
+        "lessons": [
+          "Test your knowledge of the skills in this course.",
+          "Start Course challenge",
+          "Community questions",
+          "OER Project empowers teachers to better serve their students through innovative curricula and a variety of teaching tools. OER Project logo",
+          "OER Project empowers teachers to better serve their students through innovative curricula and a variety of teaching tools.",
+          "Our mission is to provide a free, world-class education to anyone, anywhere.",
+          "Khan Academy is a 501(c)(3) nonprofit organization. Donate or volunteer today!",
+          "Site Navigation",
+          "About",
+          "Impact",
+          "Our team",
+          "Our interns",
+          "Our content specialists",
+          "Our leadership",
+          "Our supporters",
+          "Our contributors",
+          "Our finances",
+          "Careers",
+          "Internships",
+          "Cookie Preferences",
+          "Contact",
+          "Help center",
+          "Support community",
+          "Share your story",
+          "Press",
+          "Download our apps",
+          "Courses",
+          "Math: Pre-K - 8th grade",
+          "Math: High school & college",
+          "Math: Multiple grades",
+          "Math: Illustrat"
+        ]
+      }
+    ],
+    "root_key": null
+  }
+}

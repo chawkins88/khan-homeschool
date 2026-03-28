@@ -1,0 +1,5 @@
+session/
+*.har
+*.trace
+captured_requests*.json
+sample_operations.json

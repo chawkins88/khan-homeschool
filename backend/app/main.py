@@ -1,18 +1,19 @@
 from datetime import date, timedelta
 import json
 import os
+import re
 import subprocess
 from pathlib import Path
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from dotenv import load_dotenv
+from app.services.khan_cdp_progress import fetch_progress_via_cdp
 
 load_dotenv()
 
 app = FastAPI(title='Khan Homeschool Dashboard')
 
 BASE_DIR = Path(__file__).resolve().parents[2]
-LIVE_ACTIVITY_FEED_PATH = BASE_DIR / 'live-activity-feed.json'
 TARGET_DATE = date(2026, 5, 8)
 TODAY = date(2026, 3, 18)
 DAYS_LEFT = (TARGET_DATE - TODAY).days
@@ -22,45 +23,160 @@ WEEKS_LEFT = max(1, DAYS_LEFT / 7)
 RYAN_CALENDAR_ID = os.getenv('RYAN_CALENDAR_ID', '')
 GOG_ACCOUNT = os.getenv('GOG_ACCOUNT', '')
 
-courses = [
+COURSE_CATALOG_PATH = BASE_DIR / 'research' / 'khan' / 'course_catalog.json'
+COURSE_BLUEPRINTS = [
     {
-        'slug': 'math-6',
+        'slug': 'cc-sixth-grade-math',
         'name': '6th Grade Math',
         'status': 'well underway',
-        'recent': [
-            'Volume with fractions',
-            'How volume changes from changing dimensions',
-            'Volume of a rectangular prism: fractional dimensions',
-        ],
-        'estimated_total_items': 148,
-        'estimated_done_items': 92,
         'next_focus': 'Finish current volume/geometry work, then continue next unit',
     },
     {
-        'slug': 'physics',
+        'slug': 'ms-physics',
         'name': 'Middle School Physics',
         'status': 'underway',
-        'recent': ['Gravitational force', 'Understand: gravitational force'],
-        'estimated_total_items': 22,
-        'estimated_done_items': 7,
-        'next_focus': 'Continue gravity unit, then move to next physics topic',
+        'next_focus': 'Continue gravity/energy work, then move to the next physics topic',
     },
     {
-        'slug': 'big-history',
+        'slug': 'oer-project-big-history',
         'name': 'OER Project: Big History',
         'status': 'underway',
-        'recent': ['Claim Warm-Up', '1.3 practice', '1.4 practice'],
-        'estimated_total_items': 34,
-        'estimated_done_items': 8,
         'next_focus': 'Continue current Big History sequence and keep steady weekly pace',
     },
 ]
 
-for c in courses:
-    remaining = c['estimated_total_items'] - c['estimated_done_items']
-    c['remaining_items'] = remaining
-    c['progress_percent'] = round((c['estimated_done_items'] / c['estimated_total_items']) * 100)
-    c['per_week_needed'] = round(remaining / WEEKS_LEFT, 1)
+
+def normalize_title(value: str) -> str:
+    value = (value or '').lower().strip()
+    value = value.replace('’', "'")
+    value = re.sub(r'up next for you!?', '', value, flags=re.I)
+    value = re.sub(r'\b(unit mastery|mastery unavailable)\b.*$', '', value, flags=re.I)
+    value = re.sub(r'\b(unfamiliar|attempted|familiar|proficient|mastered)\b', '', value, flags=re.I)
+    value = re.sub(r'\b(details|start course challenge|course challenge)\b', '', value, flags=re.I)
+    value = re.sub(r'\s+', ' ', value)
+    value = re.sub(r'\s*[:\-–—]+\s*$', '', value)
+    value = re.sub(r'^[^a-z0-9]+|[^a-z0-9]+$', '', value)
+    return value.strip()
+
+
+def title_token_set(value: str) -> set[str]:
+    norm = normalize_title(value)
+    return {token for token in re.split(r'[^a-z0-9]+', norm) if token and token not in {'the', 'a', 'an', 'and', 'or', 'for', 'to', 'of', 'in'}}
+
+
+def title_match_score(activity_title: str, catalog_title: str) -> int:
+    a = normalize_title(activity_title)
+    b = normalize_title(catalog_title)
+    if not a or not b:
+        return 0
+    if a == b:
+        return 100
+
+    a_tokens = title_token_set(a)
+    b_tokens = title_token_set(b)
+    if not a_tokens or not b_tokens:
+        return 0
+
+    overlap_tokens = a_tokens & b_tokens
+    overlap = len(overlap_tokens)
+    if overlap == 0:
+        return 0
+
+    score = overlap * 10
+    if a in b or b in a:
+        score += 15
+    if overlap == min(len(a_tokens), len(b_tokens)):
+        score += 25
+    score -= abs(len(a_tokens) - len(b_tokens)) * 2
+    return max(score, 0)
+
+
+def load_course_catalog() -> dict:
+    try:
+        return json.loads(COURSE_CATALOG_PATH.read_text())
+    except Exception:
+        return {}
+
+
+def iter_catalog_objects(course_entry: dict):
+    seen = set()
+    for section in course_entry.get('units_from_text', []):
+        unit_name = section.get('unit', '')
+        if unit_name.strip().lower() == 'course challenge':
+            continue
+        for lesson in section.get('lessons', []):
+            lesson = (lesson or '').strip()
+            normalized = normalize_title(lesson)
+            if not lesson or not normalized:
+                continue
+            if normalized in seen:
+                continue
+            if len(title_token_set(normalized)) < 2:
+                continue
+            seen.add(normalized)
+            yield {
+                'unit': unit_name,
+                'title': lesson,
+                'normalized': normalized,
+            }
+
+
+def build_courses_from_live_data(live_data: dict) -> list[dict]:
+    catalog = load_course_catalog()
+    activity = live_data.get('activity', []) if isinstance(live_data, dict) else []
+
+    activity_by_course = {}
+    for item in activity:
+        course_name = (item.get('course') or '').strip().lower()
+        if course_name:
+            activity_by_course.setdefault(course_name, []).append(item)
+
+    courses = []
+    for blueprint in COURSE_BLUEPRINTS:
+        catalog_entry = catalog.get(blueprint['slug'], {})
+        objects = list(iter_catalog_objects(catalog_entry))
+
+        completed_titles = set()
+        recent_titles = []
+        matched_pairs = []
+
+        for item in activity_by_course.get(blueprint['name'].lower(), []):
+            raw_title = (item.get('title') or '').strip()
+            if raw_title and raw_title not in recent_titles:
+                recent_titles.append(raw_title)
+
+            best_obj = None
+            best_score = 0
+            for obj in objects:
+                score = title_match_score(raw_title, obj['title'])
+                if score > best_score:
+                    best_score = score
+                    best_obj = obj
+
+            if best_obj and best_score >= 20:
+                completed_titles.add(best_obj['normalized'])
+                matched_pairs.append({'activity': raw_title, 'catalog': best_obj['title'], 'unit': best_obj['unit'], 'score': best_score})
+
+        estimated_total_items = len(objects)
+        estimated_done_items = len(completed_titles)
+        remaining = max(0, estimated_total_items - estimated_done_items)
+        progress_percent = round((estimated_done_items / estimated_total_items) * 100) if estimated_total_items else 0
+
+        courses.append({
+            'slug': blueprint['slug'],
+            'name': blueprint['name'],
+            'status': blueprint['status'],
+            'recent': recent_titles[:5],
+            'estimated_total_items': estimated_total_items,
+            'estimated_done_items': estimated_done_items,
+            'remaining_items': remaining,
+            'progress_percent': progress_percent,
+            'per_week_needed': round(remaining / WEEKS_LEFT, 1) if estimated_total_items else 0,
+            'next_focus': blueprint['next_focus'],
+            'matched_titles': matched_pairs[:10],
+        })
+
+    return courses
 
 
 def load_calendar_events(start_date: date, end_date: date):
@@ -135,23 +251,19 @@ def build_schedule(start_date: date = TODAY, days: int = 14):
 
 def get_updated_activity_data():
     """Return the latest structured Khan activity feed available to the backend."""
-    if not LIVE_ACTIVITY_FEED_PATH.exists():
+    try:
+        payload = fetch_progress_via_cdp()
+        payload['source'] = 'khan-cdp-live'
+        payload['item_count'] = len(payload.get('activity', []))
+        return payload
+    except Exception as exc:
         return {
             'ok': False,
-            'source': 'live-activity-feed.json',
-            'error': f'missing file: {LIVE_ACTIVITY_FEED_PATH}',
-            'items': [],
+            'source': 'khan-cdp-live',
+            'error': str(exc),
+            'activity': [],
+            'item_count': 0,
         }
-
-    with LIVE_ACTIVITY_FEED_PATH.open() as f:
-        payload = json.load(f)
-
-    stat = LIVE_ACTIVITY_FEED_PATH.stat()
-    payload['ok'] = True
-    payload['source'] = 'live-activity-feed.json'
-    payload['file_mtime'] = stat.st_mtime
-    payload['item_count'] = len(payload.get('items', []))
-    return payload
 
 
 @app.get('/health')
@@ -159,18 +271,21 @@ def health():
     return {'ok': True}
 
 
-@app.get('/api/activity-feed/live')
-def activity_feed_live():
-    return get_updated_activity_data()
-
-
-@app.get('/api/activity-feed/refresh')
-def activity_feed_refresh():
-    return get_updated_activity_data()
+@app.get('/api/khan/progress/live')
+def khan_progress_live():
+    try:
+        return fetch_progress_via_cdp()
+    except Exception as exc:
+        return {
+            'ok': False,
+            'error': str(exc),
+        }
 
 
 @app.get('/api/dashboard')
 def dashboard():
+    live_progress = get_updated_activity_data()
+    courses = build_courses_from_live_data(live_progress)
     total_remaining = sum(c['remaining_items'] for c in courses)
     return {
         'learner': 'Ryan',
@@ -189,7 +304,7 @@ def dashboard():
             ],
         },
         'calendar': build_schedule(),
-        'live_activity_feed': get_updated_activity_data(),
+        'live_progress': live_progress,
     }
 
 
@@ -200,6 +315,8 @@ def calendar_plan():
 
 @app.get('/', response_class=HTMLResponse)
 def home():
+    live = get_updated_activity_data()
+    courses = build_courses_from_live_data(live)
     cards = []
     for c in courses:
         cards.append(f"""
@@ -215,7 +332,6 @@ def home():
         """)
 
     cal = build_schedule()
-    live = get_updated_activity_data()
     rows = []
     for d in cal['suggested_days'][:10]:
         blocks = ', '.join([f"{b['time']} {b['subject']} {b['minutes']}m" for b in d['blocks']])
@@ -223,16 +339,13 @@ def home():
         rows.append(f"<tr><td>{d['date']}</td><td>{d['busy_count']}</td><td>{busy}</td><td>{blocks}</td></tr>")
 
     activity_rows = []
-    for item in live.get('items', [])[:10]:
-        score = ''
-        if item.get('correctCount') is not None and item.get('problemCount') is not None:
-            score = f"{item['correctCount']}/{item['problemCount']}"
+    for item in live.get('activity', [])[:10]:
         activity_rows.append(
-            f"<tr><td>{item.get('timestamp','')}</td><td>{item.get('kind','')}</td><td>{item.get('title','')}</td><td>{item.get('subtitle','')}</td><td>{item.get('durationMinutes','')}</td><td>{score}</td></tr>"
+            f"<tr><td>{item.get('date','')}</td><td>{item.get('title','')}</td><td>{item.get('course','')}</td><td>{item.get('level','') or ''}</td><td>{item.get('change','') or ''}</td><td>{item.get('correct_total','') or ''}</td><td>{item.get('time_min','') if item.get('time_min') is not None else ''}</td></tr>"
         )
 
     empty_note = "Ryan's calendar is currently empty in the next two weeks, so the planner is assigning fuller school days everywhere." if cal['calendar_is_empty'] else "Calendar events detected — heavier work is being pushed toward emptier days."
-    live_status = f"Loaded {live.get('item_count', 0)} live activity items from backend source {live.get('source', 'unknown')}." if live.get('ok') else f"Live activity feed unavailable: {live.get('error', 'unknown error')}"
+    live_status = f"Loaded {live.get('item_count', 0)} live activity items from backend source {live.get('source', 'unknown')}. Exercise min: {live.get('totals', {}).get('exerciseMinutes', 'n/a')} · Total learning min: {live.get('totals', {}).get('totalMinutes', 'n/a')}" if live.get('ok') else f"Live activity feed unavailable: {live.get('error', 'unknown error')}"
     initial_live_json = json.dumps(live).replace('</', '<\\/')
 
     return f"""
@@ -272,15 +385,15 @@ def home():
     </div>
     {''.join(cards)}
     <div class='card'>
-      <h2>Live activity feed</h2>
+      <h2>Live Khan progress</h2>
       <div class='toolbar'>
         <button id='refresh-data-button' type='button'>Refresh Data</button>
-        <a class='button' href='/api/activity-feed/live'>View live activity JSON</a>
+        <a class='button' href='/api/khan/progress/live'>View live Khan JSON</a>
         <span id='live-status'>{live_status}</span>
       </div>
       <table>
         <thead>
-          <tr><th>Timestamp</th><th>Kind</th><th>Title</th><th>Course</th><th>Minutes</th><th>Score</th></tr>
+          <tr><th>Date</th><th>Title</th><th>Course</th><th>Level</th><th>Change</th><th>Score</th><th>Minutes</th></tr>
         </thead>
         <tbody id='activity-feed-body'>
           {''.join(activity_rows) if activity_rows else '<tr><td colspan="6">No live activity items loaded</td></tr>'}
@@ -294,7 +407,7 @@ def home():
         <tr><th>Date</th><th>Busy events</th><th>Existing calendar</th><th>Suggested school blocks</th></tr>
         {''.join(rows)}
       </table>
-      <p class='muted'>API: <a href='/api/dashboard'>/api/dashboard</a> · <a href='/api/calendar-plan'>/api/calendar-plan</a> · <a href='/api/activity-feed/live'>/api/activity-feed/live</a> · <a href='/api/activity-feed/refresh'>/api/activity-feed/refresh</a></p>
+      <p class='muted'>API: <a href='/api/dashboard'>/api/dashboard</a> · <a href='/api/calendar-plan'>/api/calendar-plan</a> · <a href='/api/khan/progress/live'>/api/khan/progress/live</a></p>
     </div>
     <script>
     const initialLiveData = {initial_live_json};
@@ -305,7 +418,7 @@ def home():
 
     function buildStatusText(data) {{
       if (data.ok) {{
-        return `Loaded ${{data.item_count || 0}} live activity items from backend source ${{data.source || 'unknown'}}.`;
+        return `Loaded ${{data.item_count || 0}} live activity items from ${{data.source || 'unknown'}}. Exercise min: ${{data.totals?.exerciseMinutes ?? 'n/a'}} · Total learning min: ${{data.totals?.totalMinutes ?? 'n/a'}}`;
       }}
       return `Live activity feed unavailable: ${{data.error || 'unknown error'}}`;
     }}
@@ -315,21 +428,21 @@ def home():
       const bodyEl = document.getElementById('activity-feed-body');
       statusEl.textContent = buildStatusText(data);
 
-      const items = Array.isArray(data.items) ? data.items.slice(0, 10) : [];
+      const items = Array.isArray(data.activity) ? data.activity.slice(0, 10) : [];
       if (!items.length) {{
-        bodyEl.innerHTML = '<tr><td colspan="6">No live activity items loaded</td></tr>';
+        bodyEl.innerHTML = '<tr><td colspan="7">No live activity items loaded</td></tr>';
         return;
       }}
 
       bodyEl.innerHTML = items.map((item) => {{
-        const score = item.correctCount != null && item.problemCount != null ? `${{item.correctCount}}/${{item.problemCount}}` : '';
         return `<tr>
-          <td>${{escapeHtml(item.timestamp)}}</td>
-          <td>${{escapeHtml(item.kind)}}</td>
+          <td>${{escapeHtml(item.date)}}</td>
           <td>${{escapeHtml(item.title)}}</td>
-          <td>${{escapeHtml(item.subtitle)}}</td>
-          <td>${{escapeHtml(item.durationMinutes)}}</td>
-          <td>${{escapeHtml(score)}}</td>
+          <td>${{escapeHtml(item.course)}}</td>
+          <td>${{escapeHtml(item.level || '')}}</td>
+          <td>${{escapeHtml(item.change || '')}}</td>
+          <td>${{escapeHtml(item.correct_total || '')}}</td>
+          <td>${{escapeHtml(item.time_min ?? '')}}</td>
         </tr>`;
       }}).join('');
     }}
@@ -342,7 +455,7 @@ def home():
       button.textContent = 'Refreshing...';
       statusEl.textContent = 'Refreshing live activity data...';
       try {{
-        const response = await fetch(`/api/activity-feed/refresh?_=${{Date.now()}}`, {{ cache: 'no-store' }});
+        const response = await fetch(`/api/khan/progress/live?_=${{Date.now()}}`, {{'cache': 'no-store'}});
         const data = await response.json();
         renderActivityFeed(data);
       }} catch (err) {{
