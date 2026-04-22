@@ -19,7 +19,6 @@ a dynamic recommended cadence, and a rolling 5-day suggested schedule.
 - **Automation:** Python + Playwright (Chromium) for the Khan session
 - **Storage:** Flat JSON files in `research/khan/` for catalog + user config
 - **Frontend:** Server-rendered HTML with vanilla JS on top (React planned)
-- **Database:** MongoDB (local, optional — shipped in `mongodb-local/`)
 
 ## What the dashboard shows
 
@@ -187,5 +186,3 @@ it, the schedule planner treats every weekday as open.
   by default) contains login cookies. It is *not* tracked by git, and
   generic profile/cookie paths are blocked in `.gitignore` in case anyone
   overrides `KHAN_PROFILE_DIR` to point inside the repo.
-- MongoDB local binaries are shipped under `mongodb-local/` for convenience
-  but its `data/` and `logs/` dirs are gitignored.

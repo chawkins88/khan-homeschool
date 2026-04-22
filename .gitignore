@@ -33,10 +33,6 @@ cookies.json
 session-state.json
 storage-state.json
 
-# MongoDB local data
-mongodb-local/data/
-mongodb-local/logs/
-
 # Live data feeds (runtime artifacts, not source)
 live-activity-feed.json
 
@@ -47,4 +43,3 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
-mongodb-local/bin/
