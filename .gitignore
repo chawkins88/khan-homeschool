@@ -21,6 +21,18 @@ env/
 *.key
 *.secret
 
+# Khan Academy session cookies / credentials
+# The backend writes a persistent Chromium profile here by default:
+#   ~/.cache/khan-homeschool/chromium-profile
+# If anyone overrides KHAN_PROFILE_DIR to point inside the repo, keep it out.
+chromium-profile/
+khan-homeschool-profile/
+cookies.json
+*.cookies
+*.cookie
+session-state.json
+storage-state.json
+
 # MongoDB local data
 mongodb-local/data/
 mongodb-local/logs/
